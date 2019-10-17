@@ -1,0 +1,75 @@
+#
+# Apaxy by @adamwhitcroft
+#
+# For a full breakdown of the mod_autoindex module:
+# http://apache.org/docs/2.2/mod/mod_autoindex.html
+#
+	# ENABLE INDEXING
+	Options +Indexes
+
+	# INDEX OPTIONS
+	IndexOptions +Charset=UTF-8 +FancyIndexing +FoldersFirst +IgnoreCase +SuppressSize +XHTML +HTMLTable +SuppressRules +SuppressDescription +NameWidth=* +DescriptionWidth=*
+	
+	# HIDE /theme DIRECTORY
+	IndexIgnore .htaccess /!new_content_library /theme /uploads /upload youtube-dl.exe thumbs.db wget.exe cmd.lnk update.bat update.php /xxx /bookmarks /news_ticker /drawing_tutorials /weather /ascii_art
+#
+# GENERAL ICONS (BLANK, DIRECTORY, PARENT DIRECTORY)
+#
+
+#
+# Replace {FOLDERNAME} with your directory URL eg:
+# If your directory is http://mywebsite.com/share/
+# you would change to:
+#
+# AddIcon /webelements/template/icons/blank.png ^^BLANKICON^^
+#
+
+	AddIcon /webelements/template/icons/blank.png ^^BLANKICON^^
+	AddIcon /webelements/template/icons/folder.png ^^DIRECTORY^^
+	AddIcon /webelements/template/icons/folder-home.png ..
+
+#
+# EXTENSION SPECIFIC ICONS
+#
+
+	AddIcon /webelements/template/icons/audio.png .aif .iff .m3u .m4a .mid .mp3 .mpa .ra .wav .wma .f4a .f4b .oga .ogg
+	AddIcon /webelements/template/icons/bin.png .bin
+	AddIcon /webelements/template/icons/c.png .c
+	AddIcon /webelements/template/icons/calc.png .xlsx .xlsm .xltx .xltm .xlam .xlr .xls .csv
+	AddIcon /webelements/template/icons/css.png .css
+	AddIcon /webelements/template/icons/deb.png .deb
+	AddIcon /webelements/template/icons/doc.png .doc .docx .docm .dot .dotx .dotm .log .msg .odt .pages .rtf .tex .wpd .wps
+	AddIcon /webelements/template/icons/draw.png .svg
+	AddIcon /webelements/template/icons/eps.png .ai .eps
+	AddIcon /webelements/template/icons/gif.png .gif
+	AddIcon /webelements/template/icons/html.png .html .xhtml .shtml .htm
+	AddIcon /webelements/template/icons/ico.png .ico
+	AddIcon /webelements/template/icons/java.png .jar
+	AddIcon /webelements/template/icons/jpg.png .jpg .jpeg
+	AddIcon /webelements/template/icons/js.png .js .json
+	AddIcon /webelements/template/icons/markdown.png .md
+	AddIcon /webelements/template/icons/package.png .pkg .dmg
+	AddIcon /webelements/template/icons/pdf.png .pdf
+	AddIcon /webelements/template/icons/php.png .php .phtml
+	AddIcon /webelements/template/icons/png.png .png
+	AddIcon /webelements/template/icons/ps.png .ps
+	AddIcon /webelements/template/icons/psd.png .psd
+	AddIcon /webelements/template/icons/rar.png .rar
+	AddIcon /webelements/template/icons/rb.png .rb
+	AddIcon /webelements/template/icons/rpm.png .rpm
+	AddIcon /webelements/template/icons/rss.png .rss
+	AddIcon /webelements/template/icons/sql.png .sql
+	AddIcon /webelements/template/icons/tiff.png .tiff
+	AddIcon /webelements/template/icons/text.png .txt .nfo
+	AddIcon /webelements/template/icons/video.png .asf .asx .avi .flv .mkv .mov .mp4 .mpg .rm .srt .swf .vob .wmv .m4v .f4v .f4p .ogv
+	AddIcon /webelements/template/icons/xml.png .xml
+	AddIcon /webelements/template/icons/zip.png .zip
+	DefaultIcon /webelements/template/icons/default.png
+
+#
+# THEME FILES
+#
+
+	HeaderName /webelements/template/header.php
+	ReadmeName /webelements/template/footer.php
+	IndexStyleSheet "/style.css"
